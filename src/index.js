@@ -32,11 +32,11 @@ export const { redirect } = page;
 
 export const Link = props => (
   <a
+    {...props}
     href={props.to}
     onClick={() => {
       navigate(props.to);
       return false;
-    }}>
-    {props.children}
-  </a>
+    }}
+  />
 );
