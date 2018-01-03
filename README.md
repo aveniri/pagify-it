@@ -27,7 +27,6 @@ const App = () => <Router {...{ routes }} />; // you can pass an `opts` prop too
 // use <Link to="/posts" /> to display a link <a />
 
 // methods available:
-
 // navigate('/posts'), to navigate to a certain path
 // redirect('/login'), to redirect to a certain path
 
