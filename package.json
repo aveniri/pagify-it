@@ -1,7 +1,7 @@
 {
   "name": "pagify-it",
   "description": "Add routing to your React app in one minute.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
