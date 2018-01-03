@@ -21,7 +21,7 @@ const routes = {
   '*': () => <pre>404</pre>
 };
 
-const App = () => <Router <Router {...{ routes }} />; // you can pass an `opts` prop too
+const App = () => <Router {...{ routes }} />; // you can pass an `opts` prop too
 
 // helpers:
 // use <Link to="/posts" /> to display a link <a />
