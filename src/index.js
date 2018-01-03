@@ -36,10 +36,8 @@ export const Link = props => (
   <a
     {...props}
     href={props.to}
-    onClick={e => {
-      const { to, onClick } = props;
-      if (onClick) onClick(e);
-      navigate(to);
+    onClick={() => {
+      navigate(props.to);
       return false;
     }}
   />
