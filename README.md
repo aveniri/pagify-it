@@ -14,13 +14,11 @@ import Root from './root';
 const Foo = () => null;
 const Bar = () => null;
 
-const Idiot = () => <pre>What the fuck are you doing?</pre>;
-
 const routes = {
   '/': Root,
   '/foo': Foo,
   '/bar/:id': Bar,
-  '*': Idiot
+  '*': () => <pre>404</pre>
 };
 
 const App = () => <Router routes={routes} />; // you can pass an `opts` prop too
@@ -92,7 +90,7 @@ const routes = {
   '*': () => <pre>404</pre>
 };
 
-const App = () => <Router routes={routes} />;
+const App = () => <Router {...{ routes }} />;
 
 render(<App />, document.getElementById('root'));
 ```

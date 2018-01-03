@@ -3,27 +3,29 @@ import React, { Component } from 'react';
 import page from 'page';
 
 export default class extends Component {
-  static defaultProps = {
-    routes: [],
-    opts: {}
-  };
+  static defaultProps = { routes: [], opts: {} };
 
   state = { path: null, ctx: null };
 
   componentWillMount() {
-    Object.keys(this.props.routes).forEach(path =>
+    const { routes, opts } = this.props;
+
+    Object.keys(routes).forEach(path =>
       page(path, ctx => this.setState({ path, ctx }))
     );
 
-    page.start(this.props.opts);
+    page.start(opts);
   }
 
   render() {
-    const Route = this.props.routes[this.state.path];
+    const { routes } = this.props;
+    const { path, ctx } = this.state;
 
-    if (!Route && !this.props.routes['*']) return null;
+    const Route = routes[path];
 
-    return <Route ctx={this.state.ctx} />;
+    if (!Route && !routes['*']) return null;
+
+    return <Route {...{ ctx }} />;
   }
 }
 
