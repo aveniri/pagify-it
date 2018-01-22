@@ -35,7 +35,7 @@ const App = () => <Router {...{ routes }} />; // you can pass an `opts` prop too
 
 # Documentation
 
-See [Page.js](https://visionmedia.github.io/page.js/), it's no longer maintained. This package is meant for small projects and for quick prototyping only, use something more sophisticated if you intend to build a larger product.
+See [Page.js](https://visionmedia.github.io/page.js/). This package is meant for small projects and for quick prototyping, consider something more sophisticated if you intend to build a larger product.
 
 # Example
 
