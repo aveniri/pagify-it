@@ -8,7 +8,7 @@
     "url": "git+https://github.com/sonaye/pagify-it.git"
   },
   "peerDependencies": {
-    "page": "^1.7.1"
+    "page": "^1.8.1"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",

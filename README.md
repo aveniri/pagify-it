@@ -18,7 +18,7 @@ const routes = {
   '/': Root,
   '/foo': Foo,
   '/bar/:id': Bar,
-  '*': () => <pre>404</pre>
+  '*': () => <div>404</div>
 };
 
 const App = () => <Router {...{ routes }} />; // you can pass an `opts` prop too
@@ -46,35 +46,35 @@ import { render } from 'react-dom';
 import Router, { Link } from 'pagify-it';
 
 const Root = () => (
-  <pre style={styles.container}>
+  <div style={styles.container}>
     <h1>Root</h1>
     <Link to="/posts">Posts</Link>
-  </pre>
+  </div>
 );
 
 const Posts = () => (
-  <pre style={styles.container}>
+  <div style={styles.container}>
     <h1>Posts</h1>
     <Link to="/posts/1">Post #1</Link>
     <Link to="/posts/2">Post #2</Link>
     <Link to="/posts/3">Post #3</Link>
     <Link to="/posts/new">New post</Link>
     <Link to="/">Back to root</Link>
-  </pre>
+  </div>
 );
 
 const New = () => (
-  <pre style={styles.container}>
+  <div style={styles.container}>
     <h1>New post</h1>
     <Link to="/posts">Back to posts</Link>
-  </pre>
+  </div>
 );
 
 const Post = props => (
-  <pre style={styles.container}>
+  <div style={styles.container}>
     <h1>Post #{props.ctx.params.id}</h1>
     <Link to="/posts">Back to posts</Link>
-  </pre>
+  </div>
 );
 
 const styles = {
@@ -86,7 +86,7 @@ const routes = {
   '/posts': Posts,
   '/posts/new': New,
   '/posts/:id': Post,
-  '*': () => <pre>404</pre>
+  '*': () => <div>404</div>
 };
 
 const App = () => <Router {...{ routes }} />;
