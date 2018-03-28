@@ -1,5 +1,7 @@
 # pagify-it
 
+[![npm version](https://badge.fury.io/js/pagify-it.svg)](https://badge.fury.io/js/pagify-it)
+
 # Installation
 
 `yarn add page pagify-it`
