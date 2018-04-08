@@ -41,6 +41,8 @@ See [Page.js](https://visionmedia.github.io/page.js/).
 
 # Example
 
+[![Edit kx8v0w2vk3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/kx8v0w2vk3)
+
 ```javascript
 import React from 'react';
 import { render } from 'react-dom';
