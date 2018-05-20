@@ -2,11 +2,11 @@
 
 [![npm version](https://badge.fury.io/js/pagify-it.svg)](https://badge.fury.io/js/pagify-it)
 
-# Installation
+## Installation
 
 `yarn add page pagify-it`
 
-# Usage
+## Usage
 
 ```javascript
 import Router, { Link, navigate, redirect } from 'pagify-it';
@@ -37,11 +37,11 @@ const App = () => <Router {...{ routes }} />;
 // context: each rendered route will have a `ctx` prop with some metadata
 ```
 
-# Documentation
+## Documentation
 
 See [Page.js](https://visionmedia.github.io/page.js/).
 
-# Example
+## Example
 
 Available [here](https://github.com/sonaye/pagify-it/tree/master/src/example).
 
