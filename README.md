@@ -23,7 +23,9 @@ const routes = {
   '*': () => <div>404</div>
 };
 
-const App = () => <Router {...{ routes }} />; // you can pass an `opts` prop too
+const App = () => <Router {...{ routes }} />;
+
+// props: routes, opts (optional), base (optional)
 
 // helpers:
 // use <Link href="/posts" /> to display a link <a />

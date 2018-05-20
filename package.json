@@ -2,7 +2,7 @@
   "license": "MIT",
   "name": "pagify-it",
   "description": "Add routing to your React app in one minute.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build":
-      "mkdir -p lib && NODE_ENV=production babel src --out-dir lib --presets=es2015,stage-0,react-app --watch"
-  }
+      "mkdir -p lib && NODE_ENV=production babel src --out-dir lib --presets=es2015,stage-0,react-app"
+  },
+  "files": ["lib"]
 }

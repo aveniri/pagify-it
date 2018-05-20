@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import page from 'page';
 
 export default class extends Component {
-  static defaultProps = { routes: [], opts: {} };
+  static defaultProps = { routes: [], opts: {}, base: undefined };
 
   state = { path: null, ctx: null };
 
   componentWillMount() {
-    const { routes, opts } = this.props;
+    const { routes, opts, base } = this.props;
+
+    if (base) page.base(base);
 
     Object.keys(routes).forEach(path =>
       page(path, ctx => this.setState({ path, ctx }))
