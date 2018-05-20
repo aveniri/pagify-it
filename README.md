@@ -43,59 +43,6 @@ See [Page.js](https://visionmedia.github.io/page.js/).
 
 # Example
 
-[![Edit kx8v0w2vk3](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/kx8v0w2vk3)
+Available [here](https://github.com/sonaye/pagify-it/tree/master/src/example).
 
-```javascript
-import React from 'react';
-import { render } from 'react-dom';
-
-import Router, { Link } from 'pagify-it';
-
-const Root = () => (
-  <div style={styles.container}>
-    <h1>Root</h1>
-    <Link href="/posts">Posts</Link>
-  </div>
-);
-
-const Posts = () => (
-  <div style={styles.container}>
-    <h1>Posts</h1>
-    <Link href="/posts/1">Post #1</Link>
-    <Link href="/posts/2">Post #2</Link>
-    <Link href="/posts/3">Post #3</Link>
-    <Link href="/posts/new">New post</Link>
-    <Link href="/">Back to root</Link>
-  </div>
-);
-
-const New = () => (
-  <div style={styles.container}>
-    <h1>New post</h1>
-    <Link href="/posts">Back to posts</Link>
-  </div>
-);
-
-const Post = props => (
-  <div style={styles.container}>
-    <h1>Post #{props.ctx.params.id}</h1>
-    <Link href="/posts">Back to posts</Link>
-  </div>
-);
-
-const styles = {
-  container: { display: 'flex', flexDirection: 'column' }
-};
-
-const routes = {
-  '/': Root,
-  '/posts': Posts,
-  '/posts/new': New,
-  '/posts/:id': Post,
-  '*': () => <div>404</div>
-};
-
-const App = () => <Router {...{ routes }} />;
-
-render(<App />, document.getElementById('root'));
-```
+**Note:** Routing with hashes is used in the example for hosting on GitHub pages, in a typical app you won't need it.
