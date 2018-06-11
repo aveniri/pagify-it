@@ -25,7 +25,7 @@ const routes = {
 
 const App = () => <Router {...{ routes }} />;
 
-// props: routes, opts (optional), base (optional)
+// props: routes, opts (optional), base (optional), onChange (optional)
 
 // helpers:
 // use <Link href="/posts" /> to display a link <a />
