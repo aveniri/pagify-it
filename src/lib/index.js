@@ -8,7 +8,7 @@ export default class extends Component {
   state = { path: null, ctx: null };
 
   componentWillMount() {
-    const { routes, opts, base } = this.props;
+    const { routes, opts, base, onChange } = this.props;
 
     if (base) page.base(base);
 
@@ -18,6 +18,21 @@ export default class extends Component {
 
     page.start(opts);
   }
+
+  componentDidMount() {
+    this.onChange();
+  }
+
+  componentDidUpdate() {
+    this.onChange();
+  }
+
+  onChange = () => {
+    const { onChange } = this.props;
+    const { path, ctx } = this.state;
+
+    if (onChange) onChange(path, ctx);
+  };
 
   render() {
     const { routes } = this.props;
