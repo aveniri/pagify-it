@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/pagify-it.svg)](https://badge.fury.io/js/pagify-it)
 
-## Installation
+## Install
 
 `yarn add page pagify-it`
 
@@ -43,6 +43,6 @@ See [Page.js](https://visionmedia.github.io/page.js/).
 
 ## Example
 
-Available [here](https://github.com/sonaye/pagify-it/tree/master/src/example).
+Available [https://sonaye.github.io/pagify-it/](<[source](/example)>).
 
 **Note:** Routing with hashes is used in the example for hosting on GitHub pages, in a typical app you won't need it.
