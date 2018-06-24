@@ -1,5 +1,7 @@
-# 0.0.12
+# 0.0.13
 
+- Add support for `to` prop in `<Link />`.
+- Add base prop to `<Link />`.
 - Fix possible `<Link />` bug.
 - Show proper `displayName`.
 - Add `prop-types`.

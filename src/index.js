@@ -13,7 +13,7 @@ export default class Router extends React.PureComponent {
 
   static defaultProps = {
     opts: {},
-    base: undefined,
+    base: '',
     onChange: undefined
   };
 
@@ -64,19 +64,33 @@ export default class Router extends React.PureComponent {
 export const navigate = to => page.show(to);
 export const { redirect } = page;
 
-export const Link = props => (
-  // eslint-disable-next-line max-len
-  // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+export const Link = ({ children, base, href, to, ...props }) => (
   <a
+    href={`${base}${href || to}`}
     onClick={e => {
-      navigate(props.href);
+      navigate(href || to);
       e.preventDefault();
       return false;
     }}
-    {...props}
-  />
+    {...props}>
+    {children}
+  </a>
 );
 
+const hrefOrTo = ({ href, to }) =>
+  !href &&
+  !to &&
+  new Error('One of `href` or `to` props is required by the Link component.');
+
 Link.propTypes = {
-  href: PropTypes.string.isRequired
+  base: PropTypes.string,
+  children: PropTypes.any.isRequired,
+  href: hrefOrTo,
+  to: hrefOrTo
+};
+
+Link.defaultProps = {
+  base: '',
+  href: undefined,
+  to: undefined
 };

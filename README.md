@@ -28,7 +28,8 @@ const App = () => <Router {...{ routes }} />;
 // props: routes, opts (optional), base (optional), onChange (optional)
 
 // helpers:
-// use <Link href="/posts" /> to display a link <a />
+// use <Link to="/posts" /> to display a link <a />
+// also accepts `href` instead of `to`, and accepts a base prop as well (optional)
 
 // methods available:
 // navigate('/posts'), to navigate to a certain path
