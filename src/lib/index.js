@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 
 import page from 'page';
 
-export default class extends Component {
-  static defaultProps = { routes: [], opts: {}, base: undefined };
+export default class Router extends React.PureComponent {
+  static defaultProps = {
+    routes: [],
+    opts: {},
+    base: undefined
+  };
 
-  state = { path: null, ctx: null };
+  state = {
+    path: null,
+    ctx: null
+  };
 
   componentWillMount() {
     const { routes, opts, base, onChange } = this.props;
