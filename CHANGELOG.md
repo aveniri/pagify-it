@@ -1,5 +1,6 @@
-# 0.0.11
+# 0.0.12
 
+- Fix possible `<Link />` bug.
 - Show proper `displayName`.
 - Add `prop-types`.
 - Use Rollup.
