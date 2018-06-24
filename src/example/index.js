@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Paper from 'material-ui/Paper';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-import Router, { navigate, redirect } from '../lib';
+import Router, { navigate, redirect } from '../src';
 
 import './style.css';
 
@@ -84,8 +84,8 @@ const routes = {
 };
 
 // base is needed for GitHub hosting, plus hashes work better there
-const App = () => (
-  <Router {...{ routes }} base={`${process.env.PUBLIC_URL}/#`} />
-);
+const base = process.env.NODE_ENV === 'production' ? '/pagify-it/#' : '';
+
+const App = () => <Router {...{ routes, base }} />;
 
 export default App;
