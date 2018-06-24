@@ -1,6 +1,7 @@
 # 0.0.9
 
-- Show proper displayName.
+- Show proper `displayName`.
+- Add `prop-types`.
 - Use Rollup.
 
 # 0.0.8

@@ -8,10 +8,14 @@
     "type": "git",
     "url": "git+https://github.com/sonaye/pagify-it.git"
   },
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  },
   "peerDependencies": {
     "page": "^1.8.6"
   },
   "devDependencies": {
+    "@material-ui/core": "1.2.3",
     "babel-eslint": "8.2.5",
     "babel-plugin-external-helpers": "6.22.0",
     "babel-preset-es2015": "6.24.1",
@@ -23,7 +27,6 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.9.1",
     "gh-pages": "1.2.0",
-    "@material-ui/core": "1.2.3",
     "page": "1.8.6",
     "parcel-bundler": "1.9.2",
     "react": "16.4.1",

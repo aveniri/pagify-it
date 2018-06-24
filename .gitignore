@@ -1,6 +1,8 @@
+.cache/
 .DS_Store
 build/
-dist/
+dev/
+lib/
 node_modules/
 yarn-debug.log*
 yarn-error.log*

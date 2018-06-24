@@ -1,12 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import page from 'page';
+import PropTypes from 'prop-types';
 
 export default class Router extends React.PureComponent {
+  static propTypes = {
+    routes: PropTypes.object.isRequired,
+    opts: PropTypes.object,
+    base: PropTypes.object.string,
+    onChange: PropTypes.func
+  };
+
   static defaultProps = {
-    routes: [],
     opts: {},
-    base: undefined
+    base: undefined,
+    onChange: undefined
   };
 
   state = {
@@ -15,7 +23,7 @@ export default class Router extends React.PureComponent {
   };
 
   componentWillMount() {
-    const { routes, opts, base, onChange } = this.props;
+    const { routes, opts, base } = this.props;
 
     if (base) page.base(base);
 
@@ -57,6 +65,8 @@ export const navigate = to => page.show(to);
 export const { redirect } = page;
 
 export const Link = props => (
+  // eslint-disable-next-line max-len
+  // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
   <a
     {...props}
     onClick={() => {
@@ -65,3 +75,7 @@ export const Link = props => (
     }}
   />
 );
+
+Link.propTypes = {
+  href: PropTypes.string.isRequired
+};

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React from 'react';
 
 import Paper from '@material-ui/core/Paper';
@@ -8,15 +10,15 @@ import Router, { navigate, redirect } from '../src';
 
 import './style.css';
 
-const Btn = props => (
-  <Button style={styles.btn} onClick={() => navigate(props.href)}>
-    {props.label}
+const Btn = ({ href, label }) => (
+  <Button style={styles.btn} onClick={() => navigate(href)}>
+    {label}
   </Button>
 );
 
-const Title = props => (
+const Title = ({ children }) => (
   <Typography variant="title" gutterBottom>
-    {props.children}
+    {children}
   </Typography>
 );
 
@@ -49,9 +51,9 @@ const New = () => (
   </Paper>
 );
 
-const Post = props => (
+const Post = ({ ctx }) => (
   <Paper square style={styles.paper}>
-    <Title>/ Posts / Post {props.ctx.params.id}</Title>
+    <Title>/ Posts / Post {ctx.params.id}</Title>
 
     <Btn href="/posts" label=".. /" />
   </Paper>
@@ -68,7 +70,7 @@ const routes = {
   }
 };
 
-// base is needed for GitHub hosting, plus hashes work better there
+// base is needed for GitHub hosting (hash routing)
 const base = process.env.NODE_ENV === 'production' ? '/pagify-it/#' : '';
 
 const App = () => <Router {...{ routes, base }} />;
