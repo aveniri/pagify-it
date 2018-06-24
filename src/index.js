@@ -7,7 +7,7 @@ export default class Router extends React.PureComponent {
   static propTypes = {
     routes: PropTypes.object.isRequired,
     opts: PropTypes.object,
-    base: PropTypes.object.string,
+    base: PropTypes.string,
     onChange: PropTypes.func
   };
 

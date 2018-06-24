@@ -2,7 +2,7 @@
   "license": "MIT",
   "name": "pagify-it",
   "description": "Add routing to your React app in minutes.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
