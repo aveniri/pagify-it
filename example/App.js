@@ -57,21 +57,6 @@ const Post = props => (
   </Paper>
 );
 
-const styles = {
-  paper: {
-    boxShadow: '8px 8px 0 rgba(0, 0, 0, 0.1)',
-    padding: 20,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  btn: {
-    boxShadow: '4px 4px 0 rgba(0, 0, 0, 0.1)',
-    borderRadius: 0,
-    textTransform: 'none',
-    margin: 10
-  }
-};
-
 const routes = {
   '/': Root,
   '/posts': Posts,
@@ -87,5 +72,20 @@ const routes = {
 const base = process.env.NODE_ENV === 'production' ? '/pagify-it/#' : '';
 
 const App = () => <Router {...{ routes, base }} />;
+
+const styles = {
+  paper: {
+    boxShadow: '8px 8px 0 rgba(0, 0, 0, 0.1)',
+    padding: 20,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  btn: {
+    boxShadow: '4px 4px 0 rgba(0, 0, 0, 0.1)',
+    borderRadius: 0,
+    textTransform: 'none',
+    margin: 10
+  }
+};
 
 export default App;
