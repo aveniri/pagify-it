@@ -43,6 +43,6 @@ See [Page.js](https://visionmedia.github.io/page.js/).
 
 ## Example
 
-Available [here](https://sonaye.github.io/pagify-it/) (<[source](/example)>).
+Available [here](https://sonaye.github.io/pagify-it/) ([source](/example)).
 
 **Note:** Routing with hashes is used in the example for hosting on GitHub pages, in a typical app you won't need it.
