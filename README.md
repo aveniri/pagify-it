@@ -13,8 +13,8 @@ import Router, { Link, navigate, redirect } from 'pagify-it';
 
 import Root from './root';
 
-const Foo = () => null;
-const Bar = () => null;
+const Foo = () => <div>FOO</div>;
+const Bar = () => <div>BAR</div>;
 
 const routes = {
   '/': Root,
@@ -24,16 +24,17 @@ const routes = {
 };
 
 const App = () => <Router {...{ routes }} />;
+// props: routes, opts (optional), base (optional), onChange(path, ctx) (optional)
 
-// props: routes, opts (optional), base (optional), onChange (optional)
+// to display a link <a />
+<Link to="/posts" />
+// also accepts `href` instead of `to`, and accepts a base prop (optional) as well
 
-// helpers:
-// use <Link to="/posts" /> to display a link <a />
-// also accepts `href` instead of `to`, and accepts a base prop as well (optional)
+// to navigate to a certain path
+navigate('/posts')
 
-// methods available:
-// navigate('/posts'), to navigate to a certain path
-// redirect('/login'), to redirect to a certain path
+// to redirect to a certain path
+redirect('/login')
 
 // context: each rendered route will have a `ctx` prop with some metadata
 ```
