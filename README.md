@@ -11,35 +11,33 @@
 ```javascript
 import Router, { Link, navigate, redirect } from 'pagify-it';
 
-import Root from './root';
-
-const Foo = () => <div>FOO</div>;
-const Bar = () => <div>BAR</div>;
+const Home = () => <div>HOME</div>;
+const About = () => <div>ABOUT <Link to="/">HOME</Link></div>;
+const Post = props => <div>POST # {props.ctx.params.id}</div>;
 
 const routes = {
-  '/': Root,
-  '/foo': Foo,
-  '/bar/:id': Bar,
+  '/': Home,
+  '/about': About,
+  '/post/:id': Post,
   '*': () => <div>404</div>
 };
 
 const App = () => <Router {...{ routes }} />;
 // props: routes, opts (optional), base (optional), onChange(path, ctx) (optional)
 
-// to display a link <a />
+// to display a link <a />, it accepts a base prop (optional) as well
 <Link to="/posts" />
-// also accepts `href` instead of `to`, and accepts a base prop (optional) as well
 
 // to navigate to a certain path
-navigate('/posts')
+navigate('/posts');
 
 // to redirect to a certain path
-redirect('/login')
+redirect('/login');
 
-// context: each rendered route will have a `ctx` prop with some metadata
+// context: each rendered route will have a `ctx` prop with some routing metadata
 ```
 
-## Documentation
+## Docs
 
 See [Page.js](https://visionmedia.github.io/page.js/).
 
