@@ -55,7 +55,7 @@ export default class Router extends React.PureComponent {
 
     const Route = routes[path];
     
-    if (!Route && !routes['*'] || path === false) return null;
+    if (!Route && !routes['*'] || path === null) return null;
 
     return <Route {...{ ctx }} />;
   }
